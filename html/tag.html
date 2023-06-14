@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body> h1 숫자 커질수록 글씨 작아짐 -->
+    <h1>제목</h1>
+    <h2> 오늘의 일기 </h2>
+    <h3> h3 입니다.</h3>
+    <p>오늘은 날씨가 좋다. 첫번째 html 수업을 들었다
+        <br />멋진 퍼블리셔가 어쩌꼬 저쩌고 
+    </p>
+    <hr />
+    <h4> 오늘의 할 일 </h4>
+    <!-- disc (기본값, default) 
+        - square
+        - circle
+        - none -->
+    <ul type="circle">
+        <li> html 복습하기 </li>
+        <li> 점심 먹기 </li>
+        <li> 집가기 </li>
+    </ul>
+    <h4> 아메리카노 만드는 법 </h4>
+    <ol type="A">
+        <li> <b>물</b>을 <strong>넣는다.</strong> </li>
+        <li> <i>얼음</i>을 <em>넣습니다.</em> </li>
+        <li> <del>에소프레소</del>를 <u>샷</u>을 &nbsp;&nbsp; 넣는다. </li>
+    </ol>
+
+    <!-- 리스트 안에 리스트 넣기!! -->
+    <h5> 내가 좋아하는 음식</h5>
+    <ul>
+        <li>양식
+            <ol>
+                <li>감바스</li>
+                <li>스테이크</li>
+            </ol>
+        </li>
+
+        <li>한식
+            <ol>
+                <li>김치찌개</li>
+                <li>치킨</li>
+            </ol>
+        </li>
+        <li>일식</li>
+            <ol>
+                <li>초밥
+                    <ul>
+                        <li>계란초밥</li>
+                        <li>연어초밥</li>
+                    </ul>
+                </li>
+                <li>텐동</li>
+            </ol>
+    </ul>
+
+<!-- detail & summary tag -->
+    <details>
+            <summary>제목</summary>
+            <ul>
+                <li> 아무태그나 </li>
+                <li> 넣어도 돼요 </li>
+            </ul>
+            <div> Lorem ipsum dolor sit, amet consectetur adipi</div>
+    </details>
+
+
+    <h3> img & a 태그</h3>
+    <!-- 
+    img 속성
+     - src : 이미지 경로
+    - alt : 이미지 설명
+    a 태그 속성
+    - href : 이동 경로
+    - target : 웹 페이지가 열릴 위치
+    - title : a태그에 대한 설명
+    -->
+    <img src="https://item.kakaocdn.net/do/749097e33bc9a1b868731460980c6e1e8b566dca82634c93f811198148a26065"
+     alt="호호와거난이" 
+     width="500"> 
+     <!-- width는 크기 변경해주는거!!! -->
+
+     <img src="/html/img/cafe.png" alt="호호와거난이2">
+     <!-- 위에 머시기는 절대경로라고하는데 새싹폴더로가서 하묜 안열림 이런건 별로안조음 
+        절대경로란? 상단의 폴더부터 차례대로 경로를 찾는 것 -->
+
+    <img src="./img/cafe.png" alt="호호와거난이2" width="300">
+    <!-- 이건 상대경로!! 상대경로란? 현재 위치로부터 찾아라 -->
+
+    <a href="https://www.naver.com/" target="_blank"
+    title="마우스 커서를 올리면 나타나는 문장입니다."> 네이버로이동</a>
+    <!-- 원래 링크 누르면 새창잉 아니고 현재창에 나오는데 그건 마이셀프인가..아무튼 어쩌고임
+    기본적으로 그렇게 설정되있어서 타겟으로 설정 안해줘도댐 블랭크 하묜 새창 -->
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+        <a href="/test/practice01.html">카페메뉴(절대경로)</a>
+        <a href="../html/test/practice01.html">카페메뉴(상대경로)</a>
+    <br />        
+    <br />
+
+    <!-- 사진을 클릭했을떄 구글로 이동하도록 만들기!! -->
+       <a href="https://www.google.com/">
+        <img src="../html/img/호호와거난이3.png" alt="호호와거난이3">
+       </a>
+    
+</body>
+</html>

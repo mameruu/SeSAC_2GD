@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 실습</title>
+</head>
+<body>
+    <form> 
+        <h4>설문조사</h4>
+        <label> 이름
+            <input type="text" /> 
+        </label>
+        <br />
+        <label> 이메일
+            <input type="email"  placeholder="love@example.com"/>
+        </label>
+        <br />
+        <h4>나이</h4>
+            <input type="radio" name="age" id="radio1"> <label for="radio1"> 10대</label>
+            <input type="radio" name="age" id="radio2"> <label for="radio2"> 20대</label>
+            <input type="radio" name="age" id="radio3"> <label for="radio3"> 30대</label>
+            <input type="radio" name="age" id="radio4"> <label for="radio4"> 40대</label>
+            <input type="radio" name="age" id="radio5"> <label for="radio5"> 50대</label>
+            <input type="radio" name="age" id="radio6"> <label for="radio6"> 60대 이상</label>
+        
+
+        
+        <h4>원하는 강의(복수 응답 가능합니다.)</h4>
+            <input type="checkbox" name="lecture" id="html" /> <label for="html">html</lavel>
+            <input type="checkbox" name="lecture" id="javascript" /> <label for="javascript">javascript</lavel>
+            <input type="checkbox" name="lecture" id="css" /> <label for="css">css</lavel>
+        
+        <br />
+        <br />
+        <textarea cols="40" rows="20" placeholder="하고 싶은 말을 써주세요 : &#41; " ></textarea>
+        <button>제출</button>
+
+        <!-- 실제로 제출하는 거면 인풋타입 서브밋으로 해줘야함~~ -->
+
+    </form>
+    
+</body>
+</html>
