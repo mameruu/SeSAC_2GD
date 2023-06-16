@@ -1,0 +1,42 @@
+section{
+    border: 1px solid blue;
+}
+
+article{
+    height: 100px;
+    border: 1px solid salmon;
+}
+
+/* 직계 자식 */
+.first > h3{
+    color: white;
+    text-align: center;
+    background-color: blue;
+}
+
+.second > h3{
+        color: midnightblue;
+        background-color: beige;
+}
+
+/* 후손 선택자 아래 두개는 의미가 가틈*/
+.first li{
+    font-size: 10px;
+}
+
+.first > article > ul > li{
+    font-size: 10px;
+}
+
+/* 인접 형제 선택자 */
+#failry + li{
+    background-color: aqua;
+    color: brown;
+}
+
+#fairy ~ li{
+    background-color: red;
+    color: white;
+}
+
+/* 일치 선택자 */

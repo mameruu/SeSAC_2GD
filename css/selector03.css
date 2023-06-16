@@ -1,0 +1,49 @@
+.div1{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: skyblue;
+    line-height: 100px;
+}
+
+
+/*  가상 클래스 선택자
+
+hover active visited focus checked //e는 선택자 의미
+- E:hover{}  요소에 마우스가 올라가 있는 동안
+- E:activer{} 요소에 마우스클릭,엔터가 눌리는동안
+- E:focus{} 요서에 포커스가 머물러 있는 동안
+- E:visited{} 요소가 링크일 때, 방문했다면 스타일 변경 (a태그)
+- E:checked{} 요소가 체크되었을 떄(radio / checkbox)
+
+*/
+
+.div1:hover{
+ background-color: yellow;
+ height: 150px;
+}
+
+.div1:active{
+    background-color: orange;
+    width: 150px;
+}
+
+/* input은 하나만 존재하니까 그냥 태그 사용 */
+input:focus{
+    background-color: blueviolet;
+    color: white;
+    outline-color: aqua; /* 아웃라인컬러는 인풋에만 속해있는 속성임 */
+}
+
+a:visited{
+    color: #ccc;
+}
+/* 일치일떄는 항상 붙여쓰기!! 띄어쓰면 다른의미댐
+각자 다 닫혀있으니가 서로서로형제요소 ㅇ_ㅇ 
+
+인풋이면서 래빗이라는 아이디를 가지고있는 아이가 체크댓다면 그 다음 형제인 라벨을*/
+input#rabbit:checked + label{
+    background-color: pink;
+    color: white;
+}
+
