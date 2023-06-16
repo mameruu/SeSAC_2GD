@@ -1,0 +1,48 @@
+<style>
+    form {
+        width: 400px;
+    }
+    
+    textarea {
+        width: 100%;
+    }
+    textarea:focus{
+        background-color: rgb(253, 209, 209)
+    }
+    
+    h3:hover{
+        background-color: black;
+        color: white;
+    }
+
+    #red:checked + label{
+        background-color: red;
+        color: white;
+    }
+
+    #blue:checked + label{
+        background-color: blue;
+        color: white;
+    }
+
+    #yellow:checked +label{
+        background-color: yellow;
+        color: black;
+    }
+
+    button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    button:active{
+        background-color: gainsboro;
+        color: #f96666;
+    }
+
+</style>
