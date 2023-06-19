@@ -1,0 +1,57 @@
+/* font-family: 'Diphylleia', serif; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+
+.font-link{
+    font-family: 'Diphylleia', serif;
+}
+
+
+.font-import{
+    font-family: 'Bagel Fat One', cursive;
+}
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.noonnu-font{
+      font-family: 'GoryeongStrawberry', serif
+}
+
+/* .cat-import{
+    font-family: 'Moirai One', cursive;
+} */
+
+.container {
+    width: 500px;
+    background-color: aliceblue;
+}
+
+
+.sentences{
+
+    /*  1rem =1em =16px
+    기본폰트굵기 기본이 400 굵게가 700
+    폰트사이즈 기본적으로 16픽셀 */
+    font-weight: 700;
+    font-size: 1em;
+    
+    text-align:  center;
+
+    text-decoration: line-through;
+    text-decoration: overline;
+    text-decoration: underline;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black
+}

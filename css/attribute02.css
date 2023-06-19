@@ -1,0 +1,154 @@
+.d-block{
+    display: block;
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 30px; /*글씨와 테두리 사이의 간격*/
+    margin: 20px;
+}
+
+.d-inline{
+    display: inline;   /*원래 가지고있는 놈인데 걍 써줌 ㅇㅇ*/
+    background-color: pink;
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.d-inline-block{
+    display: inline-block;
+    background-color: yellowgreen;
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.parent{
+    width: 300px;
+    height: 200px;
+    background-color: orange;
+}
+
+.parent .min{
+    min-width: 400px;
+    height: 100px;
+    background-color: red;
+
+}
+
+.parent .max{
+    max-width: 400px;
+    background-color: green;
+    height: 100px;
+}
+
+.box{
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+}
+
+.box-view{
+    width: 50vw;  /*여기서 브이는 뷰포트를 의미함!!더블유는 걍 위드그거임*/
+    height: 50vh;
+}
+
+.box-per{  /*퍼센트는 부모 크기를 가져옴!!!*/
+    width: 50%;
+    height: 50%;
+}
+
+.rem{
+    font-size: 2rem;
+}
+
+.em{
+    font-size: 2em;
+}
+
+
+.square{
+    display:  inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+    cursor: pointer;   /*마우스를 올렷을떄 화살표가 아닌 손가락 모양으로 바꿔줌*/
+}
+
+.rounded{
+    border-radius: 80px;
+    border-radius: 10%;
+    /* 단축속성 */
+    border-radius: 5px 40px;
+    border-radius: 5px 20px 40px;
+    border-radius: 5px 20px 30px 50px;
+}
+
+
+.box-sizing{
+    padding: 20px;
+    border: 15px solid red;
+    background-color: tomato;
+}
+
+.content-box{
+    box-sizing: content-box;  /*기본 값이라 바뀌지 않는데 편하라고 넣어줌*/
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.d-none {
+    display: none;
+    background-color: red;
+ }
+.invisible {
+    visibility: hidden;
+    background-color: orangered;
+}
+.opacity-0 {
+    opacity: 0.5;
+    background-color: tomato;
+ }
+    /* 오머시기 0은 자리는 남아잇음 그래서 클릭은 된다!! */
+.blue{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.blue:hover{
+    opacity: 0;
+}
+
+.square img[alt='푸']{
+    width: 200px
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.overflow-auto{
+    overflow:auto;
+}
+
+.overflow-sroll{
+    overflow: scroll;
+}
+/* 넘치치 않아도 스크롤 생성 */
+
+.overflow-visible{
+    overflow: visible;
+}
+/* 기본값!! 넘쳐도 넘치는 그대로 다 보여줌 */

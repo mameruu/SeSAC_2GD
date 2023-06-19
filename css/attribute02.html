@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css 기본 속성(박스 모델)</title>
+    <link rel="stylesheet" href="./attribute02.css" />
+</head>
+<body>
+    <h2> display속성 </h2>
+
+    <!--    .d-block{block $}*4 -->
+    <div class="d-block">block 1</div>
+    <div class="d-block">block 2</div>
+    <div class="d-block">block 3</div>
+    <div class="d-block">block 4</div>
+    <br />
+    <br />
+
+    <!-- span.d-inline{inline $}*4 -->
+    <span class="d-inline">inline 1</span>
+    <span class="d-inline">inline 2</span>
+    <span class="d-inline">inline 3</span>
+    <span class="d-inline">inline 4</span>
+    <br />
+    <br />
+    
+    <!-- span.d-inline-block{inline-block $}*3 -->
+    <span class="d-inline-block">inline-block 1</span>
+    <span class="d-inline-block">inline-block 2</span>
+    <span class="d-inline-block">inline-block 3</span>
+    <br />
+    <br />
+    <hr />
+
+    <h2>max-width, min-width</h2>
+    <div class="parent">
+        <div class="min"></div>
+        <div class="max"></div>
+    </div>
+
+    <hr />
+    <h2>단위</h2>
+    <div class="box box-px">px</div>
+    <div class="box box-view">viewport</div>
+    <div class="box box-per">percent</div>
+
+    <div class="rem">rem
+        <div class="rem">rem
+            <div class="rem">rem</div>
+        </div>
+    </div>
+    <div class="em">em
+        <div class="em">em
+            <div class="em">em</div>
+        </div>
+    </div>
+
+    <!-- 첫번쨰 em을 32픽셀로 생각하기떄문에 em은 부모의
+    크기를 가져오니까 !! 그래서 32 64.. 이렇게 커지는 것임. -->
+
+    <hr />
+    <h2> border-radius </h2>
+    <div class="square rounded"></div>
+
+
+
+    <hr  />
+    <h2> box-sizing </h2>
+    <div class="square box-sizing content-box"></div>
+    <div class="square box-sizing border-box"></div>
+
+
+    <hr  />
+    <h2> 모습 숨기기 </h2>
+    <div class="square">original</div>
+    <div class="square d-none">d-none</div>
+    <div class="square invisible">invisible</div>
+    <div class="square opacity-0">opacity-0</div>
+    <div class="square">original</div>
+    <div class="blue"></div>
+
+    <hr /> 
+    <h2> overflow </h2>
+    <div class="square overflow-hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolores minima est expedita dolorum consequatur saepe temporibus? Vero ab consequuntur porro sapiente aliquam provident a nam? Eveniet eius voluptatibus fuga?</p>
+        <img src="./img/pooh.png" alt="푸" />            
+    </div>
+    <div class="square overflow-auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolores minima est expedita dolorum consequatur saepe temporibus? Vero ab consequuntur porro sapiente aliquam provident a nam? Eveniet eius voluptatibus fuga?</p>
+        <img src="./img/pooh.png" alt="푸" />   
+    </div>
+    <div class="square overflow-sroll">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolores minima est expedita dolorum consequatur saepe temporibus? Vero ab consequuntur porro sapiente aliquam provident a nam? Eveniet eius voluptatibus fuga?</p>
+        <img src="./img/pooh.png" alt="푸" />   
+    </div>
+    <div class="square overflow-visible">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolores minima est expedita dolorum consequatur saepe temporibus? Vero ab consequuntur porro sapiente aliquam provident a nam? Eveniet eius voluptatibus fuga?</p>
+        <img src="./img/pooh.png" alt="푸" />   
+    </div>
+
+
+    <hr  />
+    <h2></h2>
+</body>
+
+</html>
