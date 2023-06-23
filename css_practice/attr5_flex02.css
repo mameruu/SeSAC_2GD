@@ -1,0 +1,82 @@
+/**
+ * /* common
+ *
+ * @format
+ */
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1 {
+  text-align: center;
+  color: green;
+  margin-bottom: 60px;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #ddd;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+/* TODO: header1 ~ 3까지 완성해주세요! */
+
+/* header1 */
+
+/* .header1 .span {
+  display: flex;
+}  내가한거 틀림요 ㅋ_ㅋ*/
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header1 .menus {
+  display: flex;
+  justify-content: flex-end;
+}
+.menus li {
+  /* padding: 0 5px; */
+  margin-left: 8px;
+}
+
+/* header2 */
+
+/* 헤더2에다가 플렉스 주면 안댐!! 리스트들은 메뉴스의 자식이니까  */
+
+.header2 .menus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* li태그들은 글씨 크기 만큼 가지고 있고 거기에대한 가운데 정렬이 
+  되어있어서. 얼라인 아이템 센터햇을떄 원하는 것처럼 안나옴. */
+  height: 100%; /*이렇게 해야 가져와서 원하는 정렬 댐.*/
+}
+
+/* header3 */
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*교차축 기준 가운데 정렬*/
+}
+
+.header3 ul {
+  display: flex;
+}
+
+.header3 ul li {
+  margin: 0 8px;
+}
