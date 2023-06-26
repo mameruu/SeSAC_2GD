@@ -28,6 +28,31 @@
         top: 0;
         bottom: 0;
       }
+
+      /* flex를 이용한 가운데 정렬 */
+      .parent2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parent2 > .child {
+      }
+
+      /*  position 과 transform */
+
+      .parent3 {
+        position: relative; /*차일드에게 기준점 주기 위해서*/
+      }
+
+      .parent3 > .child {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* 이렇게 하면 완벽하게 가운데가 아니고 왼쪽 위의 꼭지점 기준이기 떄문에
+        translate로 그만큼 옮겨줌  */
+        transform: translate(-50%, -50%); /*분홍색 박스 기준*/
+      }
     </style>
   </head>
   <body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 미디어 쿼리 사용하기</title>
+    <style>
+      body {
+        background-color: orange;
+      }
+      @media (min-width: 500px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+      @media (max-width: 300px) {
+        body {
+          background-color: green;
+        }
+        p {
+          font-family: "ARCHISCULPTURE_v200", serif;
+        }
+
+        @font-face {
+          font-family: "ARCHISCULPTURE_v200";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2303@1.0/ARCHISCULPTURE_v200.woff2")
+            format("woff2");
+          font-weight: normal;
+          font-style: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>미디어 쿼리 실습</p>
+  </body>
+</html>

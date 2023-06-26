@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aniamtion 실습</title>
+    <!-- <link rel="stylesheet" href="./attr7_animation.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* 기본적으로 가지고있어서 ㅇㅇ 없애줌 */
+      }
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: blueviolet;
+
+        animation: ball;
+        animation-duration: 2s;
+      }
+
+      @keyframes ball {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          /* vw뷰포트기준가로 vh뷰포트기준세로 */
+          transform: translate(calc(100vw - 100px), 0);
+        } /*공의 시작지점 기준으로 움직여서 공이 넘어가기떄문에 다시떙겨줌*/
+        50% {
+          transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+        }
+        75% {
+          transform: translate(0, calc(100vh - 100px));
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      p {
+        background-color: aqua;
+        animation: 4s slide;
+      }
+
+      @keyframes slide {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+    <p>
+      "As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I've been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I'd always thought of it as a secret, imaginary
+      place, and can barely believe that it actually exists. I close my eyes and
+      take a breath, and wonder of it all settles over me like a gentle cloud."
+    </p>
+  </body>
+</html>

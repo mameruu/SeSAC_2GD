@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습1: 크기에 따라 자리 바꾸기</title>
+
+    <style>
+      /*나는 max로 했는데 min으로 하는게 조음!!*/
+      body {
+        display: flex;
+        flex-direction: row;
+      }
+      .nemo {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        background-color: black;
+        border-radius: 10px;
+        margin-right: 30px;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          flex-direction: column;
+        }
+
+        .nemo {
+          /*위에서 body .box 이렇게 썻으면 여기도 body.box로 써야함*/
+          background-color: skyblue;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nemo"></div>
+    <div class="nemo"></div>
+    <div class="nemo"></div>
+  </body>
+</html>

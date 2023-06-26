@@ -1,0 +1,43 @@
+body {
+  background-color: aquamarine;
+}
+
+h2 {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: coral;
+  }
+  h1 {
+    color: white;
+  }
+}
+/* 여기서는 맥스와 민 둘다 사용했지만 
+일반적으로는 하나로 통일시킴!!!!!!
+반응형 웹 페이지를 만들때
+핸드폰용 페이지를 만들지, 컴퓨터용 페지이를 만들지 결정한 뒤
+먼저 만드는 페이지가 큰 화면이라면 max-width
+먼저 만드는 페이지가 작은 페이지라면 min-width를 사용
+컴퓨터 사이즈를 할떄는 max를
+핸드폰 사이즈를 할때는 min을 사용한다. */
+@media screen and (min-width: 500px) {
+  body {
+    background-color: steelblue;
+  }
+}
+
+@media /*sreen and*/ (max-width: 300px) {
+  h2 {
+    display: block;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  body {
+    background-color: yellowgreen;
+  }
+}

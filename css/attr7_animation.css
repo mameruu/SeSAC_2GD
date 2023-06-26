@@ -1,0 +1,89 @@
+/* transition vs. animation (둘의차이!!)
+    -transition
+        -hover, onclick, active등의 이벤트에 의해 발생됨.
+    -animation
+        - '중간 스텝' 을 지정해 보다 세밀한 스타일 전환 가능.
+        - keyframes를 사용(이걸로 미리 만들어서 요소에 적용하는 형식으로 사용 할 수 있음)
+    */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: relative; /*자기자신을기준으로움직이는세키*/
+
+  animation-name: box;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: linear;
+}
+
+@keyframes box {
+  /*애니메이션 이름이 박스임*/
+  0% {
+    left: 10px;
+  }
+  25% {
+    left: 100px;
+  }
+  50% {
+    left: 200px; /*0퍼센트 기준으로 200 픽셀 움지깅는고임*/
+  }
+  75% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.ball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: black;
+
+  /* 단축속성 */
+  animation: bounce1 1s ease-out infinite alternate;
+  /* 애니메이션이름 듀레이션   
+  마지막>애니메이션디렉스: 다시 또 거꾸로가게 해줌요 부드럽게헤
+  0>300>300>0 이렇게 */
+}
+
+@keyframes bounce1 {
+  to/* =0% */ {
+    top: 0px;
+  }
+  from/* =100% */ {
+    top: 300px;
+  }
+}
+
+.ball2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: coral;
+  left: 200px;
+
+  /* ainimation */
+  animation: bounce2 1s infinite;
+}
+
+@keyframes bounce2 {
+  to,
+  from {
+    /*이렇게 컴마로 연결해주면 둘다 가능*/
+    bottom: 0px;
+    animation-timing-function: ease-out;
+    background-color: yellow;
+  }
+  50% {
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    background-color: red;
+  }
+}

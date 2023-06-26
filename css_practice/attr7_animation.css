@@ -1,0 +1,37 @@
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(orange, yellow);
+  border-radius: 50%;
+  animation: ball 5s infinite;
+}
+
+@keyframes ball {
+  0% {
+    /* right: 0px;
+    animation: linear; */
+    left: 0%;
+    top: 0%;
+  }
+  25% {
+    /* right: 0px;
+    bottom: 0px;
+    animation: linear; */
+    left: calc(100vw - 100px);
+    top: 0;
+  }
+  50% {
+    left: calc(100vw - 100px);
+    top: calc(100vh - 100px);
+    /* bottom: 0px; */
+  }
+  75% {
+    left: 0;
+    top: calc(100vh - 100px);
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
