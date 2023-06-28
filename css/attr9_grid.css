@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  /* body 만큼 가져감 */
+  height: 100vh;
+  /* 바디는 기본적으로 높이가 지정ㄴㄴ 그래서 뷰포트만크 */
+
+  grid-template-rows: 200px 200px;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: repeat(5, minmax(20%, auto)); */
+
+  background-color: aliceblue;
+  row-gap: 10px;
+  column-gap: 20px;
+
+  /* justify-content */
+  /* justify-content: stretch; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-around; */
+  /* align-content */
+  /* align-content: stretch; */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+  /* justify-items */
+  /* justify-items: stretch; */
+  /* justify-items: flex-start; */
+  /* justify-items: flex-end; */
+  /* justify-items: center; */
+  /* align-items */
+  /* align-items: stretch; */
+  /* align-items: flex-end; */
+  /* align-items: flex-start; */
+  /* align-items: center; */
+}
+
+.item {
+  border: 1px solid black;
+  box-sizing: border-box;
+  /* width: 100px;
+  height: 100px; */
+}
+
+.container > .item:nth-child(1) {
+  background-color: red;
+  /* order: 1; */
+}
+
+.container > .item:nth-child(8) {
+  background-color: aqua;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 1/2;
+  z-index: 1;
+}
+
+.container > .item:last-child {
+  background-color: blueviolet;
+  grid-row: 1 /2;
+  /* grid-column: 1 /2; */
+  grid-column: 1 / span 1;
+}
+
+.container > .item:nth-child(7) {
+  background-color: pink;
+  /* align-self: stretch; (defafult) */
+  align-self: flex-start;
+  align-self: flex-end;
+  align-self: center;
+
+  /* justify-self:stretch (default) */
+  justify-self: flex-start;
+  justify-self: flex-end;
+  justify-self: center;
+}

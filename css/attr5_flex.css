@@ -120,16 +120,16 @@
 .container2 .item3 {
   /* order: 1; 오더는 실제로 바뀌는게 ㅇㅏ니고 우리가 볼때만 바뀜 */
   /* align-self: center; */
-  /* flex-grow: 2; */
-  flex-shrink: 2;
+  flex-grow: 2;
+  /* flex-shrink: 2; */
 }
 
 .container2 .item2 {
   /* font-size: 12px;
   line-height: 1; */
-  /* flex-grow: 1; */
+  flex-grow: 1;
   /* 내가 기본적으로 12345박스를 100px로 설정해둬서 
   정확하게 1;2가 아닌 이유는 전체에서 100을 뺴야댐... 
   그게 1:2임. */
-  flex-shrink: 3;
+  /* flex-shrink: 3; */
 }

@@ -27,6 +27,10 @@ header {
   width: 100%; /*뷰포트의 넓이 그대로!*/
   border-bottom: 1px solid rgb(238, 238, 238);
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 header .util-menu {
@@ -39,7 +43,7 @@ header .util-menu .inner {
 
 header .util-menu .inner ul {
   display: flex;
-  background-color: aquamarine;
+  background-color: rgb(238, 238, 238);
   height: 100%; /*유틸메뉴의 40픽셀을 ㅏㄱ져옴*/
   align-items: center;
   justify-content: flex-end;
@@ -66,13 +70,23 @@ header .util-menu .inner li:last-child a {
 }
 
 header .main-menu {
+  height: 100px;
 }
 
 header .main-menu .inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* logo */
 header .main-menu .inner .logo {
+  width: 100px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height는 원래 상속이 안됨!! 플렉스를 주면
+  기본적으로 부모의 어쩌고만큼 준다아 ㅋㅋ */
+  text-indent: -9999px; /*들여쓰기 내어쓰기를 하는 속성*/
 }
 
 header .main-menu .inner .logo a {
@@ -80,19 +94,58 @@ header .main-menu .inner .logo a {
 
 /* menu */
 header .main-menu .inner .menu {
+  display: flex; /*li를 정렬하고 싶으니까!!*/
+  align-items: center;
 }
 
 header .main-menu .inner .menu li {
+  margin: 0 31px 0 32px;
+  /* 패딩으로 여백 주는경우에는 공백까지 클릭이 돼서 대부분 마진을 준다. */
 }
 
 header .main-menu .inner .menu li a {
+  color: #2f1c11;
+  /*  a태그가 자식 요소일떄는 에이태그에 폰트 색 지정해줘야함.*/
+  font-size: 14px;
+  font-weight: 700;
+}
+
+header .main-menu .inner .menu li a:hover {
+  color: #b47632;
 }
 
 /* search */
 .search {
+  font-size: 20px;
+  /* 폰트어썸에서 가져온 놈들은 폰트사이즈로 크기 조정 */
+  display: flex;
+  align-items: center;
+  color: #d47632;
+  margin-right: 20px;
 }
 
-.search i {
+.search i:hover {
+  cursor: pointer;
 }
 
 /* main */
+
+main {
+  margin-top: 140px;
+}
+
+main .summer-new {
+  width: 100%;
+}
+
+main .summer-new a img,
+main .promotion a img {
+  display: block;
+  /* 원래는 이미지 ㅅㅏ이에 여백이 이쓴ㄴ데 그건 인라인 블럭이라 그럼
+  블럭으로 바꿔주면 없어짐!! */
+  width: 100%;
+  /* 이게 가티 잇어야 맥스머시기일떄 가티 줄어들흠. */
+  margin: 0 auto;
+  max-width: 1400px;
+  min-width: 1200px;
+}
