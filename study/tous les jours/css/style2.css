@@ -1,5 +1,6 @@
 main {
   margin-top: 123px;
+  background-color: #f7f0da;
 }
 
 .main1 {
@@ -9,26 +10,62 @@ main {
 .main1 a img {
   display: block;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   /* min-width: 0px; */
   margin: 0 auto;
 }
 
 .main2 .bread {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   width: 100%;
   max-width: 1400px;
-
-  margin: 0 auto;
+  margin: 0px auto;
+  justify-content: center;
+  
 }
 
 .camel {
-  background-color: rgb(82, 46, 30);
+  /* background-color: rgb(82, 46, 30); */
   width: 100%;
   display: flex;
+  margin-top: 0px auto;
   justify-content: center;
 }
+
+.main3{
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .section {
   width: 100%;
