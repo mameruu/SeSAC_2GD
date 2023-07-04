@@ -146,7 +146,7 @@ alphabets.forEach((alphabet, i, array) => {
 3. find >> 조건을 만족하는 요소 중 첫번째 "값" 반환
 
 매개변수로 익명함수(함수표현식,화살표함수)
-배열 자체를 변경시켜주지 않기 때문에 새로운 벼눗에 저장해서 사용
+배열 자체를 변경시켜주지 않기 때문에 새로운 변수에 저장해서 사용
 */
 
 // map
@@ -210,3 +210,5 @@ for (let area in areaNum) {
   // areaNum["Seoul"] -> 대괄호 접근법을 이용해서 value에 접근
   console.log(areaNum[area]);
 }
+
+
