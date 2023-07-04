@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -34,10 +33,9 @@ header {
   left: 0;
 }
 
-.until-menu {
+.until-menu{
   height: 56px;
 
-  /* padding: 18px, 0, 0; */
 }
 
 /* 언틸메뉴 */
@@ -96,12 +94,12 @@ header {
  
   color: #202020;
   font-size: 14.9px;
-  margin: 10px 0px 0 70px;
-  font-weight: 700;
+  margin: 10px 0px 0 82px;
+  font-weight: 400;
 }
 
 .logo img {
   position: absolute;
-  bottom: -45px;
+  bottom: 20px;
   width: 194px;
 }

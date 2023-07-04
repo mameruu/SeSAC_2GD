@@ -12,3 +12,83 @@ main {
   margin: 0 auto;
   max-width: 1920px;
 }
+
+/* 메인2 두개나누ㅓ져있능고 ㅇ_ㅇ */
+
+.main2{
+  width: 100%;
+  background-color: red;
+  display: flex;  
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.main2_left{
+  background:url(./img/main_sec1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: 60%;
+  height: 320px;
+  width: 100%;
+}
+
+.main2_left dt{
+  font-weight: 900;
+  font-size: 40px;
+  color: #071f60;
+}
+
+.main2_left dd{
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.main2_right{
+  background: url(./img/main_intro_bn.jpg) no-repeat #253f85;
+  width: 100%;
+  background-position: 60%;
+  /* background-size: 80% 80%; */
+  float: left;  /*div태그를 이용해서 할 수 있음!!!
+  이거 블로그에적으삼. 하하..-_-*/
+}
+
+.main2_right dt{
+  font-weight: 900;
+  font-size: 40px;
+  color: white;
+}
+
+.main2_right dd{
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+
+
+
+
+.main3 img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.main4 {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  
+}
+
+.section5_right{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1920px;
+  margin: -5px auto;
+
+  
+}
