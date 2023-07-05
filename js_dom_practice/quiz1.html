@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz1</title>
+  </head>
+  <body>
+    <h3>태그 내부의 글자 변경해보기</h3>
+    <div>민트초코는 <span>맛있다>_<</span></div>
+    <h3>속성 변경해보기</h3>
+    <img src="../css/img/pooh.png" alt="pooh" width="300" />
+    <p>이요르</p>
+
+    <script>
+      //민트초코는 맛없다!! 로 변경
+      const div1 = document.querySelector("div");
+      div1.innerHTML = "민트초코는 맛없다!!";
+      // 리더님 코드
+      // document.querySelector("span").innerText="맛없다"
+
+      // img태그
+      //1.src를 이요르로 변경
+      //2. 알트를 이료르를
+      //3. 가로크기 150으로
+      const eeyore = document.querySelector("img");
+      eeyore.setAttribute("src", "../css/img/eeyore.png");
+      // eeyore.src = "../css/img/eeyore.png";
+      eeyore.alt = "eeyore";
+      eeyore.width = "150";
+    </script>
+  </body>
+</html>

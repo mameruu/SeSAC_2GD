@@ -2,6 +2,22 @@ main {
   margin-top: 123px;
 }
 
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+}
+
+dt {
+  line-height: 50px;
+  font-weight: 900;
+  font-size: 50px;
+}
+
 .main1 {
   width: 100%;
 }
@@ -13,60 +29,82 @@ main {
   max-width: 1920px;
 }
 
-/* 메인2 두개나누ㅓ져있능고 ㅇ_ㅇ */
+/* 메인2 두개나누ㅓ져있능고 ㅇ_ㅇ *==============*/
 
-.main2{
+.main2 {
   width: 100%;
   background-color: red;
-  display: flex;  
+  display: flex;
   max-width: 1920px;
   margin: 0 auto;
 }
 
-.main2_left{
-  background:url(./img/main_sec1.jpeg) no-repeat;
+/* 왼쪽 =====*/
+
+.main2_left {
+  background: url(./img/main_sec1.jpeg) no-repeat;
   background-size: cover;
   background-position: 60%;
   height: 320px;
   width: 100%;
 }
 
-.main2_left dt{
-  font-weight: 900;
-  font-size: 40px;
+.main2_left dl {
+  padding: 40px 0px 0px 350px;
+  /* 빽다방은 원래 이렇게 줬는데 이건 
+  개발자 취향이라 크게 상관 없다!! 
+  여기선 크게 문제 될게 업성서 그런가?? 
+  padding: 30px 0px 0px 0px;
+  margin: 0px 0px 0px 360px; */
+}
+.main2_left dt {
   color: #071f60;
+  margin-bottom: 15px;
 }
 
-.main2_left dd{
+.main2_left dd {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
 
-.main2_right{
+.btn1 {
+  margin: 30px 0px 0px 350px;
+}
+
+.btn1:hover {
+  background-image: url(./img/counsel_btn.png);
+  background-size: contain;
+}
+
+/* 오른쪽=============== */
+.main2_right dl {
+  padding: 40px 280px 0px 80px;
+}
+
+.main2_right {
   background: url(./img/main_intro_bn.jpg) no-repeat #253f85;
   width: 100%;
   background-position: 60%;
   /* background-size: 80% 80%; */
-  float: left;  /*div태그를 이용해서 할 수 있음!!!
+  float: left; /*div태그를 이용해서 할 수 있음!!!
   이거 블로그에적으삼. 하하..-_-*/
 }
 
-.main2_right dt{
-  font-weight: 900;
-  font-size: 40px;
+.main2_right dt {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.main2_right dd {
+  font-size: 18px;
+  font-weight: 500;
   color: white;
 }
 
-.main2_right dd{
-  font-size: 18px;
-  font-weight: 500;
-  color: black;
+.btn2 {
+  margin: 30px 0px 0px 80px;
 }
-
-
-
-
 
 .main3 img {
   display: block;
@@ -80,15 +118,12 @@ main {
   width: 100%;
   margin: 0 auto;
   max-width: 1920px;
-  
 }
 
-.section5_right{
+.section5_right {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   max-width: 1920px;
   margin: -5px auto;
-
-  
 }
