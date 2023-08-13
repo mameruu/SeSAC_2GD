@@ -1,0 +1,30 @@
+/* 지도 핀 꼽기 */
+body section .pin {
+  background-color: red;
+  position: relative;
+}
+
+body section .pin i {
+  position: absolute;
+  font-size: 51px;
+  color: #023793;
+  z-index: 10;
+}
+section .pin .yg {
+  bottom: 400px;
+  color: red;
+}
+
+section .pin .gg {
+  bottom: 300px;
+  color: orange;
+}
+
+section .pin .hd {
+  bottom: 200px;
+  color: yellow;
+}
+
+section .pin .hm {
+  bottom: 100px;
+}

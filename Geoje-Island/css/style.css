@@ -1,0 +1,79 @@
+/* 모든 걸 초기화 시키고 나만의 CSS를 적용 */
+@import url("/css/reset.css");
+
+/* html 태그에 적용되는 기본 스타일 */
+@import url("/css/root.css");
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;300;400;500;700;900&display=swap");
+
+/* 기준 폰트 사이즈 1em */
+html {
+  font-size: 10px;
+}
+
+/* 기본 글꼴 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "Hahmlet", serif;
+}
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin: calc(var(--base-space) * 2) 0;
+  color: var(--text-gray-700);
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: calc(var(--base-space) * 2) 0;
+  color: var(--text-gray-700);
+}
+
+p {
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: calc(var(--base-space) * 1) 0;
+  color: var(--text-gray-700);
+}
+
+.font-size-xxxl {
+  font-size: 2.4em;
+}
+
+.font-size-xxl {
+  font-size: 2.2em;
+}
+
+.font-size-xl {
+  font-size: 2em;
+}
+
+.font-size-l {
+  font-size: 1.8em;
+}
+
+.font-size-m {
+  font-size: 1.6em;
+}
+
+.font-size-s {
+  font-size: 1.4em;
+}
+
+.font-size-xs {
+  font-size: 1.2em;
+}
+
+.font-size-xxs {
+  font-size: 1.1em;
+}
