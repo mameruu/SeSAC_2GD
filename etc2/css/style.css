@@ -1,0 +1,13 @@
+@import url(./normalize.css);
+@import url(./reset.css);
+@import url(./root.css);
+
+h1 {
+  margin: calc(var(--base-space) * 2 0);
+  background-color: var(--main-green);
+  color: var(--text-black-600);
+}
+
+h2 {
+  background-color: var(--main-blue);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스와이퍼로 전체화면 바뀌도록</title>
+    <link rel="stylesheet" href="./css/root.css" />
+    <!-- 스와이퍼 css cdn-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- 스와이퍼 js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap"
+      rel="stylesheet"
+    />
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--main-yellow);
+        opacity: 0.8;
+      }
+
+      .swiper .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--main-green);
+        text-align: center;
+        font-family: "Chela One", cursive;
+        font: bold 30px/100vh "Chela One";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">slide1</div>
+        <div class="swiper-slide">slide2</div>
+        <div class="swiper-slide">slide3</div>
+        <div class="swiper-slide">slide4</div>
+      </div>
+    </div>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        direction: "vertical",
+        loop: false,
+        speed: 1000,
+        mousewheel: true,
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>

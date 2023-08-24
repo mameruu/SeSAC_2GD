@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      ul p {
+        width: 200px;
+      }
+      ul img {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>open API 사용</h1>
+    <h2>랜덤 고양이 사진 가지고 오기</h2>
+    <div id="cat">
+      <button onclick="location.reload()">사진 바꾸기</button>
+      <br />
+      <hr />
+      <h2>영화 api 사용해보기</h2>
+      <h4></h4>
+      <ul></ul>
+    </div>
+    <script>
+      fetch("https://api.thecatapi.com/v1/images/search")
+        .then((response) => {
+          // console.log(response);
+          //json형식으로 넘어왔기 때문에 우리가 쓸 수 있게 바꿔줘야함!!
+          return response.json(); //then 끝남
+          //중괄호 없으면 리턴 안 써도 ㄱㅊ 중괄호 있으면 리턴 필요함
+        })
+        .then((data) => {
+          //   console.log(data);
+          //   console.log(data[0]);
+          //   console.log(data[0].id);
+          //   console.log(data[0].url);
+          //   console.log(data[0].height);
+          //   console.log(data[0].width);
+          const img = document.createElement("img");
+          img.src = data[0].url;
+          img.alt = ` CAT-${data[0].id}`;
+          img.width = 500;
+
+          document.querySelector("#cat").prepend(img);
+        });
+
+      // http://img.omdbapi.com/?apikey=9c3ddc68&
+
+      async function getMovieData() {
+        let word = "love";
+        //fetch 로 데이터 불러오기
+        const response = await fetch(
+          `http://www.omdbapi.com/?apikey=9c3ddc68&s=${word}`,
+          {
+            method: "GET",
+          }
+        ); //fetch 안에 아무것도 안쓰면 그건 get이라나머라나
+        const movieData = await response.json(); //응답을 받은 다음에 실행되어야하기때문에 await
+        console.log(movieData);
+        console.log(movieData.Search);
+
+        //html
+        const h4 = document.querySelector("h4");
+        h4.innerText = `영화 검색 키워드 : ${word}`;
+
+        [
+          {
+            Title: "dudlglad",
+            Poster: "~~~.jpg",
+          },
+        ];
+
+        const ul = document.querySelector("ul");
+        for (let movie of movieData.Search) {
+          // 10개 만드는데 포문이 10번 돌아가서 걍 만들어주기만하묜댐(들어오는 값이 10개라)
+          // ul > div*10>img+p
+          const div = document.createElement("div");
+          const img = document.createElement("img");
+          const p = document.createElement("p");
+
+          img.setAttribute("src", movie.Poster);
+          p.innerText = movie.Title;
+          div.append(img, p);
+          ul.append(div);
+        }
+      }
+      getMovieData(); //만들어주고 호출해야 콘솔로그에 들어옴
+    </script>
+  </body>
+</html>
