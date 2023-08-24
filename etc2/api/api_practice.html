@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api 과제1</title>
+    <script>
+      let baseDate;
+      let baseTime;
+      function nowInfo() {
+        const year = new Date().getFullYear();
+        // console.log(year);
+        const month = `0${new Date().getMonth() + 1}`.slice(-2);
+        // console.log(month);
+        const date = `0${new Date().getDate()}`.slice(-2);
+        // console.log(date);
+        baseDate = `${year}${month}${date}`;
+        // 초단기 날씨 예보 가져옴
+        const hour = `0${new Date().getHours()}`.slice(-2);
+        // console.log(hour);
+        const min = `0${new Date().getMinutes()}`.slice(-2);
+        // console.log(min);
+        baseTime = hour - 1 + "00";
+        //특정 시간 안 넘으면 안뜨니까 -1 해서 나오게하깋
+        // console.log(baseTime);
+      }
+      nowInfo();
+      console.log(baseTime);
+      console.log(baseDate);
+
+      //디코딩 키: O4Rfex2PF87iUDNO09krm5vKYPBESsTeJDttbehBcgkr0KiaPpqKxOhLoYzZVp3AmDZnsPQqWMtDlFjdOqb2yw==
+      async function getWeatherData() {
+        nowInfo(); // 날짜 받아오는 함수 호출
+        const response = await fetch(
+          //&dataType=JSON 꼭 넣긔~~^_^
+          `http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=O4Rfex2PF87iUDNO09krm5vKYPBESsTeJDttbehBcgkr0KiaPpqKxOhLoYzZVp3AmDZnsPQqWMtDlFjdOqb2yw%3D%3D&numOfRows=10&dataType=JSON&pageNo=1&base_date=${baseDate}&base_time=${baseTime}&nx=55&ny=127`,
+          {
+            method: "GET",
+          }
+        );
+        const weatherData = await response.json();
+        console.log(weatherData.response.body.items.item);
+      }
+      getWeatherData();
+
+      // const time = new Date();
+      // const hour = `${time.getHours()}시 날씨`;
+      // console.log(hour);
+    </script>
+  </head>
+  <body>
+    <h1>공공데이터포털</h1>
+  </body>
+</html>
