@@ -7,6 +7,8 @@ function getFlowers(idx) {
 }
 
 // es6 에서 module을 내보내는 방법
-export { flowers, getFlowers };
-console.log(flowers[0]);
-console.log(getFlowers(0));
+// export { flowers, getFlowers };
+// console.log(flowers[0]);
+// console.log(getFlowers(0));
+
+export { flowers as flr, getFlowers as gerFlr };
