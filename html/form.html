@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form tag</title>
-</head>
-<body>
+  </head>
+  <body>
     <form>
-        text <input type="text" />
-        <label for="email">
-            email
-        </label>
-        <input type="email" id="email"  placeholder="이메일형식" value="안녕"/>
-        <label>
-            비밀번호 
-            <input type="password" placeholder="비밀번호" />
-        </label>    
-        <!-- 연결할때는 항상 라벨태그 이용. -->
-        <br />
-        숫자 <iuput type="number" ></iuput>
-        <input type="color" /><br />
-        <input type="range" /><br />
-        <input type="file" /><br />
-        <input type="date" /><br />
+      text <input type="text" />
+      <label for="email"> email </label>
+      <input type="email" id="email" placeholder="이메일형식" value="안녕" />
+      <label>
+        비밀번호
+        <input type="password" placeholder="비밀번호" />
+      </label>
+      <!-- 연결할때는 항상 라벨태그 이용. -->
+      <br />
+      숫자 <iuput type="number"></iuput> <input type="color" /><br />
+      <input type="range" /><br />
+      <input type="file" /><br />
+      <input type="date" /><br />
 
-        <input type="button" value="버튼" /><br />
-        <input type="submit" value="버튼" /><br />
-        <button>버튼</button> <br />
-        
+      <input type="button" value="버튼" /><br />
+      <input type="submit" value="버튼" /><br />
+      <button>버튼</button> <br />
 
-        <!-- radio와 checkbox -->
-        <h5>다음 중 img태그의속성인 것은?(하나만 고르세요)</h5><br/>
-        <input type="radio" name="radio"> title
-        <input type="radio" name="radio"> value
-        <input type="radio" name="radio"> alt
-        <input type="radio" name="radio"> mouse
-        
-        <h5>다음 중 input의 타입 속성이 아닌 것은?(모두 고르시오)</h5>
-        <input type="checkbox" name="checkbox" id="text"/> <label for="text">text</label>
-        <input type="checkbox" name="checkbox" id="img"/> <label for="img">img</label>
-        <input type="checkbox" name="checkbox" id="click"/> <label for="click">click</label>
-        <input type="checkbox" name="checkbox" id="date"/> <label for="data">date</label>
-        <br />
-        <!-- 라벨로 묶어준 경우에는 글씨를 눌러도 선택이 가능하다 -->
+      <!-- radio와 checkbox -->
+      <h5>다음 중 img태그의속성인 것은?(하나만 고르세요)</h5>
+      <br />
+      <input type="radio" name="radio" /> title
+      <input type="radio" name="radio" /> value
+      <input type="radio" name="radio" /> alt
+      <input type="radio" name="radio" /> mouse
 
-        <!-- select -->
-        <select>
-            <optgroup label="라지">   <!--셀렉트 안에 옵션 넣어줄떄는 옵션사용-->
-                <option>XXL</option>
-                <option>XL</option>
-                <option>L</option>
+      <h5>다음 중 input의 타입 속성이 아닌 것은?(모두 고르시오)</h5>
+      <input type="checkbox" name="checkbox" id="text" />
+      <label for="text">text</label>
+      <input type="checkbox" name="checkbox" id="img" />
+      <label for="img">img</label>
+      <input type="checkbox" name="checkbox" id="click" />
+      <label for="click">click</label>
+      <input type="checkbox" name="checkbox" id="date" />
+      <label for="data">date</label>
+      <br />
+      <!-- 라벨로 묶어준 경우에는 글씨를 눌러도 선택이 가능하다 -->
+
+      <!-- select -->
+      <select>
+        <optgroup label="라지">
+          <!--셀렉트 안에 옵션 넣어줄떄는 옵션사용-->
+          <option>XXL</option>
+          <option>XL</option>
+          <option>L</option>
         </optgroup>
-            <optgroup label="스몰">
-                <option>S</option>
-                <option>XS</option>
-                <option>XXS</option>
-                
-            </optgroup>
+        <optgroup label="스몰">
+          <option>S</option>
+          <option>XS</option>
+          <option>XXS</option>
+        </optgroup>
+      </select>
 
-        </select>
-
-    <textarea cols="30" rows="10" placeholder="하고 싶은 말을 써주세요"></textarea>
-    <!-- 10줄 가로로 30자 -->
-
+      <textarea
+        cols="30"
+        rows="10"
+        placeholder="하고 싶은 말을 써주세요"
+      ></textarea>
+      <!-- 10줄 가로로 30자 -->
     </form>
-</body>
+  </body>
 </html>
