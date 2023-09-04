@@ -1,50 +1,43 @@
-import UseJSX from "./components/UseJSX.js"; //function 전에 임포트 해줘야함~~ 모아서써주기!
-// import FirstPractice from "./components/practice/FirstPractice.js"; //function 전에 임포트 해줘야함~~ 모아서써주기!
-// import ClassCom from "./components/ClassCom.js";
-// import FunctionState from "./components/FunctionState.jsx";
-// import ClassState from "./components/ClassState.jsx";
-// import PracticeState from "./components/practice/PracticeState.js";
-import FunctionProps from "./components/FunctionProps.jsx";
-import PracticeProps from "./components/practice/PracticeProps.jsx";
-import { ClassProps, ClassProps2 } from "./components/practice/ClassProps.jsx";
-import React from "react";
-
+import logo from "./logo.svg";
+import "./App.css";
+import { styled } from "styled-components";
 function App() {
+  const AppDiv = styled.div`
+    text-align: center;
+  `;
+  const AppHeader = styled.header`
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  `;
+  const AppLinkA = styled.a`
+    color: #61dafb;
+  `;
+  const AppLogImg = styled.img`
+    height: 40vmin;
+    pointer-events: none;
+  `;
+
   return (
-    <div>
-      <UseJSX></UseJSX>
-      {/* <FirstPractice />
-      <ClassCom />
-      <FunctionState /> */}
-      {/* <ClassState />
-      <PracticeState /> */}
-      {/* 문자열은 그냥 넘겨주고 변수나 숫자인 경우엔 {}중괄호 안에 넣어주기! */}
-      <FunctionProps name="사과" krPrice={5000} number={10} />
-      <FunctionProps name="샤인머스켓" krPrice={30000} number={3} />
-      <FunctionProps name="복숭아" />
-      <FunctionProps>여기가 children입니다!</FunctionProps>
-      <PracticeProps />
-      <ClassProps name="뽀로로" nickname="사고뭉치" color="#0186cb" />
-      <ClassProps2 name="루피" nickname="공주" bgColor="#ed9095" />
-    </div>
-    //이걸 쓰기 위해서 import 시켜주기!
-
-    //린다리더님과. ..
-    // react.Fragment
-    //리엑트 에서만 존재하는 태그!! 태그 늘리기 싫을떄 사용할 수 잇음 ㅇㅇ 하위 아이들을 그룹화 시키겠다 라는 의미!
-    // return <React.Fragment></React.Fragment>
-    // 이걸 많이 사용하니카 <> 꺽쇠만 넣었을때도 저걸 실행하게 만듬!
-
-    // const {a,b} = test1
-    // 같은 구조분해지만 test1은 a1:"1" 이라는 값을 키의 값을 가져오겠다는 의미
-    // const [a,b] =  test2
-    // 어몰흐겟음 잊어버리래. 자바문법임~
-
-    //프롭스
-    //자식은 알 수 없지만..,. 부모가 자식을 부를때 특정 값을 넣어서 부르는 것이 프롭스(?)
-
-    //기본적으로 두번씩 실행되니카 > console.log(어쩌고) 실행하면 두번씩 나옴 그러므로 스트링..어쩌고 삭제하묜댐ㅋㅋ
+    <AppDiv className="App">
+      <AppHeader className="App-header">
+        <AppLogImg src={logo} className="App-logo" alt="logo" />{" "}
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <AppLinkA
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></AppLinkA>{" "}
+      </AppHeader>
+    </AppDiv>
   );
 }
-
 export default App;

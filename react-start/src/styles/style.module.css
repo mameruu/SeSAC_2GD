@@ -1,0 +1,28 @@
+/* 앞에 style은 아무렇게나 이름 지어도 ㄱㅊ음
+.module.css 이건 꼭 지켜줘야한다 !! */
+
+.box2 {
+  background-color: gainsboro;
+}
+
+.box2 div {
+  background-color: pink;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+/* 여러개 지정 */
+
+.first {
+  color: orange;
+  font-size: 1 0.5rem;
+}
+
+.second {
+  background-color: black;
+  border: 1px solid orange;
+}
