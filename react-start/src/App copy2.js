@@ -13,6 +13,7 @@ import UseJSX from "./components/UseJSX.js"; //function 전에 임포트 해줘�
 // import PororoObj from "./components/practice/Pororo.jsx";
 // import ChangeObj from "./components/practice/ChangeObj.js";
 import BasicCss from "./components/BasicCss.jsx";
+import "./styles/style.scss";
 
 function App() {
   const dataArr = [
@@ -42,6 +43,7 @@ function App() {
       <MapChild />
       <PororoObj /> */}
       <BasicCss color={"blue"} />
+      <div>hi</div>
     </div>
     //이걸 쓰기 위해서 import 시켜주기!
 

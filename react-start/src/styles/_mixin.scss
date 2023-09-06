@@ -1,0 +1,41 @@
+@mixin square1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+// 매개변수 들어갈떈 ()써주기~
+@mixin circle($circleColor: blue, $circleOpacity: 0.8) {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: inline-block;
+  background-color: $circleColor;
+  opacity: $circleOpacity;
+}
+
+// default 값을 주는 경우 -> 오류방지를 위해서 넣어주는 게 좋다!
+@mixin square2(
+  $squareBgColor: red,
+  $squareFontSize: 15px,
+  $squareFontColor: gray
+) {
+  @include square1();
+  line-height: 100px;
+  text-align: center;
+  background-color: $squareBgColor;
+  font-size: $squareFontSize;
+  color: $squareFontColor;
+  //   squareBgColor는 여기서 선언해준 변수라
+  //   나가면 쓸 수 없흠!
+  @if $squareBgColor == yellow {
+    //   border-radius: 50%;
+    opacity: 0.2;
+  } @else if $squareBgColor == black {
+    border-radius: 20%;
+  } @else {
+    border-radius: 10%;
+  }
+}

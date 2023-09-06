@@ -1,0 +1,10 @@
+.comp {
+  border: 1px solid $buttonColor;
+  background-color: orange;
+  h2 {
+    color: white;
+  }
+  //   관계를 잘 알기!!! use scss02 는 comp 클래스 안에 있으니카
+  //   h2안이 아닌 여기에 넣어준다하~
+  @import "use_scss2";
+}

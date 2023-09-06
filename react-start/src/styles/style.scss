@@ -1,0 +1,155 @@
+// 한층 진화된 sass
+
+@import "reset";
+@import "mixin";
+$boxShadow: 2px 2px 6px rgba(58, 58, 58, 0.8);
+$buttonColor: blue;
+
+.div1 {
+  width: 100%;
+  height: 50vh;
+  background-color: red;
+  .div2 {
+    width: 80%;
+    height: 50%; //div1의 50%~
+    background-color: orange;
+    box-shadow: inset $boxShadow; //안쪽으로: 가로, 세로, 퍼짐정도, 색
+    .div3 {
+      width: 80%;
+      height: 50%;
+      box-shadow: $boxShadow;
+      background-color: yellow;
+    }
+  }
+
+  .btn {
+    width: 180px;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+    line-height: 70px;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 3px;
+
+    &.orangered {
+      background-color: orangered;
+    }
+
+    &--opacity {
+      background-color: $buttonColor;
+      opacity: 0.5;
+    }
+
+    &--blue {
+      background-color: $buttonColor;
+    }
+    &:hover {
+      font-weight: 700;
+      color: yellow;
+    }
+  }
+
+  //btn을 의미
+  //   .btn:hover {
+  //     font-weight: 700;
+  //     color: yellow;
+  //   }
+}
+
+.container {
+  .box1 {
+    @include square1;
+    background-color: blue;
+
+    // &:nth-child(1) {
+    //   background-color: red;
+    //   width: 100px;
+    // }
+    // &:nth-child(2) {
+    //   background-color: orange;
+    //   width: 120px;
+    // }
+    // &:nth-child(3) {
+    //   background-color: yellow;
+    //   width: 140px;
+    // }
+
+    // to는 마지막 순번 그런데 포함 안함!! 내가 1-3까지만 가고싶다면 to에 4 쓰면 됩니다!
+    @for $i from 1 to 4 {
+      //$i는 변수고 이걸 그대로 쓸 수 없기 때문에 #을 앞에 붙여주는 거임!
+      &:nth-child(#{$i}) {
+        width: (80px + 20px * $i);
+      }
+    }
+  }
+  .circle {
+    @include circle($circleColor: blue, $circleOpacity: 0.8);
+    // @include circle($buttonColor, 0.5);
+    $circleBgColors: (blue, dodgerblue, rgb(82, 169, 255));
+    @each $el in $circleBgColors {
+      // 내가선언 : 기본내장함수
+
+      $index: index($circleBgColors, $el);
+      &:nth-of-type(#{$index}) {
+        @include circle($circleColor: $el, $circleOpacity: 1 - 0.2 * $index);
+      }
+    }
+  }
+  .box2 {
+    // default 값이 존재해서 오류 x
+    // @include square2(
+    //   $squareBgColor: yellow,
+    //   $squareFontSize: 20px,
+    //   $SquareFontColor: blue
+    // );
+
+    @include square2(black, 16px, white);
+    &:nth-of-type(4) {
+      @include square2(yellow, 20px, navy);
+    }
+    &:nth-of-type(5) {
+      @include square2(orangered, 30px, black);
+    }
+  }
+}
+
+.img-test {
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  &-src-img {
+    background: url(../assets/img1.png);
+  }
+
+  &.public-img {
+    background-color: url("/assets/img1.png");
+  }
+}
+
+.practice {
+  display: flex;
+  justify-content: space-evenly;
+  div {
+    width: 200px;
+    height: 300px;
+    background-color: pink;
+    border: 2px solid palevioletred;
+    background-image: url(../assets/img1.png);
+    box-shadow: $boxShadow;
+    border-radius: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    //  1 through 4 -> 이건 1부터 4까지라는 의미!
+    @for $num from 1 to 5 {
+      &:nth-child(#{$num}) {
+        background-image: url(../assets/img#{$num}.png);
+      }
+    }
+  }
+}
+
+@import "use_scss1";
