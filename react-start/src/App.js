@@ -17,6 +17,9 @@ import UseJSX from "./components/UseJSX.js"; //function 전에 임포트 해줘�
 // import "./styles/style.scss";
 // import UseScss01 from "./components/UseScss01.jsx";
 import UseMemoObj from "./components/05_UseMemoObj.jsx";
+import UseCallback from "./components/06_UseCallback.jsx";
+import UseReducer from "./components/07_UseReducer.jsx";
+import ContextTheme from "./components/08_ContextTheme.jsx";
 
 function App() {
   const dataArr = [
@@ -49,6 +52,9 @@ function App() {
       {/* <UseScss />
       <UseScss01 /> */}
       <UseMemoObj />
+      <UseCallback />
+      <UseReducer />
+      <ContextTheme />
     </div>
     //이걸 쓰기 위해서 import 시켜주기!
 
