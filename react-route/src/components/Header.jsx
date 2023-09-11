@@ -13,6 +13,9 @@ export default function Header() {
         <li>
           <a href="/board">게시판</a>
         </li>
+        <li>
+          <a href="/practice">실습문제</a>
+        </li>
       </ul>
     </nav>
   );
