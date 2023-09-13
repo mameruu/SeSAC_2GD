@@ -1,0 +1,60 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  background-color: rgb(218, 213, 198);
+  color: rgb(152, 127, 93);
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.todoContainer {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li::marker {
+      content: "🧻  ";
+    }
+    li {
+      text-align: start;
+      margin: 2px;
+
+      button {
+        background-color: rgb(99, 56, 29);
+        color: rgb(218, 213, 198);
+        margin-left: 10px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.doneContainer {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+      text-align: start;
+      margin: 2px;
+    }
+    // li::marker {
+    //   content: "💩 ";
+    // }
+  }
+}
+h1 {
+  color: rgb(99, 56, 29);
+}
