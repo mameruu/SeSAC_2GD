@@ -10,10 +10,6 @@ export default function TodoList() {
   const dispatch = useDispatch();
   const nextId = useSelector((state) => state.todo.nextID);
 
-  const addTodo = () => {
-    dispatch(create({ id: nextId, text: input.current.value }));
-    input.current.value = "";
-  };
   return (
     <>
       <h1>TodoList 💩</h1>
@@ -21,18 +17,19 @@ export default function TodoList() {
         <input
           type="text"
           ref={input}
+          // onKeyPress={} -> 해주면 버그 사라지는데 이거.. 곧 사라지는 거라 별로 안좋음!
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === "Enter" && e.nativeEvent.isComposing === true) {
               //엔터했을때
-              addTodo();
-              console.log("!");
+              dispatch(create({ id: nextId, text: input.current.value }));
+              input.current.value = ""; // -> 자꾸 버그나서 난 추가함 e.nativeEvent.isComposing === true  이것두!
             }
           }}
         ></input>
         <button
           onClick={() => {
-            addTodo();
-            console.log("!");
+            dispatch(create({ id: nextId, text: input.current.value }));
+            input.current.value = "";
           }}
         >
           추가
